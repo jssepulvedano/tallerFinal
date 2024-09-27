@@ -53,11 +53,10 @@ class UserControllerTest {
                 .bodyValue(userRequest)
                 .exchange()
                 .expectStatus().isOk()
-                .returnResult(User.class) // Obtenemos el resultado de la respuesta
+                .returnResult(User.class)
                 .getResponseBody()
-                .single() // Obtenemos el único elemento esperado
+                .single()
                 .doOnNext(result -> {
-                    // Validamos el objeto User de la respuesta
                     assertEquals(userResponse.getId(), result.getId());
                     assertEquals(userResponse.getIdentification(), result.getIdentification());
                     assertEquals(userResponse.getName(), result.getName());
@@ -89,11 +88,11 @@ class UserControllerTest {
                 .uri("/users/" + identification)
                 .exchange()
                 .expectStatus().isOk()
-                .returnResult(UserDTO.class) // Obtenemos el resultado de la respuesta
+                .returnResult(UserDTO.class)
                 .getResponseBody()
-                .single() // Obtenemos el único elemento esperado
+                .single()
                 .doOnNext(result -> {
-                    // Validamos el objeto UserDTO de la respuesta
+
                     assertEquals(userDTO.getId(), result.getId());
                     assertEquals(userDTO.getIdentification(), result.getIdentification());
                     assertEquals(userDTO.getName(), result.getName());
@@ -114,7 +113,7 @@ class UserControllerTest {
         user.setId("1");
         user.setIdentification(identification);
         user.setName("John Doe");
-        user.setBalance(600.0);  // Balance updated from 500 to 600
+        user.setBalance(600.0);
 
         when(userService.updateUserBalanceByIdentification(eq(identification), any(Double.class)))
                 .thenReturn(Mono.just(user));
@@ -125,11 +124,11 @@ class UserControllerTest {
                 .bodyValue(balanceRequest)
                 .exchange()
                 .expectStatus().isOk()
-                .returnResult(User.class) // Obtenemos el resultado de la respuesta
+                .returnResult(User.class)
                 .getResponseBody()
-                .single() // Obtenemos el único elemento esperado
+                .single()
                 .doOnNext(result -> {
-                    // Validamos el objeto User de la respuesta
+
                     assertEquals(user.getId(), result.getId());
                     assertEquals(user.getIdentification(), result.getIdentification());
                     assertEquals(user.getName(), result.getName());

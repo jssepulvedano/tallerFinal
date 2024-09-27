@@ -49,9 +49,9 @@ class CashoutServiceTest {
         responseSpec = mock(WebClient.ResponseSpec.class);
         requestBodyUriSpec = mock(WebClient.RequestBodyUriSpec.class);
 
-        when(webClient.post()).thenReturn(requestBodyUriSpec);  // Mock de POST
-        when(requestBodyUriSpec.uri(anyString())).thenReturn(requestBodyUriSpec);  // Mock de uri()
-        when(requestBodyUriSpec.retrieve()).thenReturn(responseSpec);  // Mock de retrieve()
+        when(webClient.post()).thenReturn(requestBodyUriSpec);
+        when(requestBodyUriSpec.uri(anyString())).thenReturn(requestBodyUriSpec);
+        when(requestBodyUriSpec.retrieve()).thenReturn(responseSpec);
         when(responseSpec.bodyToMono(Boolean.class)).thenReturn(Mono.just(true));
     }
 

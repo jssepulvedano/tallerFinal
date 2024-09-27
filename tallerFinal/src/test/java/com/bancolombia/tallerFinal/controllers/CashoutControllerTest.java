@@ -60,7 +60,7 @@ class CashoutControllerTest {
                     Cashout body = response.getResponseBody();
                     assertNotNull(body);
 
-                    // Verificamos que el cuerpo contenga el ID y otros atributos esperados
+
                     assertEquals(cashoutResponse.getId(), body.getId(), "Response body does not contain the expected Cashout ID");
                     assertEquals(cashoutResponse.getIdentification(), body.getIdentification(), "Response body does not contain the expected identification");
                     assertEquals(cashoutResponse.getAmount(), body.getAmount(), "Response body does not contain the expected amount");
