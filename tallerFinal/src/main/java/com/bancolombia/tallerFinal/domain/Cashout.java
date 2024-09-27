@@ -6,31 +6,31 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document
 public class Cashout {
     @Id
-    private Long id;
-    private String Name;
-    private Double balance;
+    private String id;
+    private Long identification;
+    private Double amount ;
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public String getName() {
-        return Name;
+    public Long getIdentification() {
+        return identification;
     }
 
-    public void setName(String name) {
-        Name = name;
+    public void setIdentification(Long identification) {
+        this.identification = identification;
     }
 
-    public Double getBalance() {
-        return balance;
+    public Double getAmount() {
+        return amount;
     }
 
-    public void setBalance(Double balance) {
-        this.balance = balance;
+    public void setAmount(Double amount) {
+        this.amount = amount;
     }
 }

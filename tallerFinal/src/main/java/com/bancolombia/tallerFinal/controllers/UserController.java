@@ -10,8 +10,12 @@ import reactor.core.publisher.Mono;
 @RestController
 @RequestMapping("/users")
 public class UserController {
+
+    private final UserService userService;
     @Autowired
-    private UserService userService;
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
 
     @PostMapping("/create")
     public Mono<User> createUser(@RequestBody User request) {

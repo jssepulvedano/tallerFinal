@@ -1,4 +1,4 @@
-package com.bancolombia.tallerFinal.controllers;
+package com.bancolombia.TransactionMicroservice.controllers;
 
 public class CashoutDTO {
     private String id;

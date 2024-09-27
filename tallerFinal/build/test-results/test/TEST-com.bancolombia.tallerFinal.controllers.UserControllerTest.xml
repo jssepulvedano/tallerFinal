@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.bancolombia.tallerFinal.controllers.UserControllerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-09-27T05:58:58" hostname="PB0B0915282" time="11.126">
+  <properties/>
+  <testcase name="testFindByIdentification()" classname="com.bancolombia.tallerFinal.controllers.UserControllerTest" time="10.699"/>
+  <testcase name="testUpdateUserBalance()" classname="com.bancolombia.tallerFinal.controllers.UserControllerTest" time="0.258"/>
+  <testcase name="testCreateUser()" classname="com.bancolombia.tallerFinal.controllers.UserControllerTest" time="0.152"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

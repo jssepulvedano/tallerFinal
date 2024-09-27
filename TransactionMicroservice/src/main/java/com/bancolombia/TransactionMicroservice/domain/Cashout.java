@@ -1,9 +1,14 @@
-package com.bancolombia.tallerFinal.controllers;
+package com.bancolombia.TransactionMicroservice.domain;
 
-public class CashoutDTO {
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
+public class Cashout {
+    @Id
     private String id;
     private Long identification;
-    private Double amount;
+    private Double amount ;
 
     public String getId() {
         return id;
